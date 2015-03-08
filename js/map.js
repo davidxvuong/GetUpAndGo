@@ -56,9 +56,6 @@ function initialize() {
 	});
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
-
-
 function markerFactory(latLngObj, mapObj, image, text) {
 	var marker = new google.maps.Marker({
 		position: latLngObj,
@@ -88,4 +85,6 @@ window.onload = function load() {
 	initLatLng = new google.maps.LatLng(initLat, initLng);
 	finalLatLng = new google.maps.LatLng(finalLat, finalLng);
 	initialize();
+	
+	google.maps.event.addDomListener(window, 'load', initialize);
 }
