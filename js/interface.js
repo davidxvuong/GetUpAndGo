@@ -7,13 +7,36 @@ var radius;
 var vehicle;
 
 function getPoint(initLat, initLong, radius) {
-	var maxDeg = radtoDeg(radius / EARTH_RADIUS);
-	var randLat = (Math.random() * 2 - 1) * maxDeg;
-	var maxLong = Math.sqrt(Math.pow(maxDeg,2) - Math.pow(randLat,2));
-	var randLong = (Math.random() * 2 - 1) * maxLong;
+	var isProperLocation = false;
+	var maxDeg;
+	var randLat;
+	var maxLong;
+	var randLong;
+	var inArray;
+	var testElevation = new google.maps.ElevationService();
 	
-	finLat = initLat + randLat;
-	finLong = initLong + randLong;
+	while (!isProperLocation) {
+		maxDeg = radtoDeg(radius / EARTH_RADIUS);
+		randLat = (Math.random() * 2 - 1) * maxDeg;
+		maxLong = Math.sqrt(Math.pow(maxDeg,2) - Math.pow(randLat,2));
+		randLong = (Math.random() * 2 - 1) * maxLong;
+	
+		finLat = initLat + randLat;
+		finLong = initLong + randLong;
+		inArray.push(new google.maps.LatLng(finLat, finLong));
+		
+		testElevation.getElevationForLocations({'locations': inArray}, function(results, status) {
+			if (status === google.maps.ElevationStatus.OK) {
+				if (results[0].elevation > 0 ) {
+					isProperLocation = true;
+				}
+				else {
+					setTimeout(function(){console.log('200 ms delay'}, 200);
+				}
+			}
+		});
+		
+	}
 
 	//Debugging code
 	console.log("Latitude of the destination is " + finLat);
