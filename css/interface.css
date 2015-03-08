@@ -5,6 +5,11 @@ html, body, h1, h2, h3, ul, li, a, p, header, button, div {
 	margin: 0;
 }
 
+html {
+	background-image: url("http://cdn1.wallpaperus.org/wallpapers/set1/43/1459419643-a-couple-bikes.jpg");
+	background-size: cover;
+}
+
 /*h1 {
  font: bold italic 3em/1em Impact, Charcoal, sans-serif;
  text-shadow: 5px 10px 5px #0b0b0b;
@@ -29,7 +34,6 @@ body {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #ccffff;
 	font-size: 40px;
 }
 
@@ -57,8 +61,9 @@ footer {
 .desc {
 	text-align: center;
 	font-family: Arial;
+	font-size: 75%;
 	font-variant: small-caps;
-	padding: 10px 0px 40px 0px;
+	padding: 10px 0px 0px 0px;
 }
 
 .animate
@@ -70,7 +75,8 @@ footer {
 .action-button
 {
 	position: relative;
-	padding: 10px 10px 10px 10px;
+	padding: 10px 10px;
+	margin: 0px 0px 20px 0px;
 	border-radius: 15px;
 	font-family: 'Pacifico', cursive;
 	font-size: 40px;
