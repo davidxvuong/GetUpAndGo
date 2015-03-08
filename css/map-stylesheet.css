@@ -6,6 +6,16 @@
 
 #map {
 	height: 100%;
+	width: 75%;
+	float: right;
     margin: 0px;
     padding: 0px
+}
+
+#directions {
+	background-color: black;
+	width: 25%;
+	height: 100%;
+	float: left;
+	color: #ffffff;
 }
