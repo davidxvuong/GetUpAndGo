@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Get Up and Go!</title>
+		<link type="text/css" rel="stylesheet" href="css/foundation.css"/>
+
+		<script>
+			function go() {
+				console.log("Go function triggered");
+				console.log("Current distance is: " + distance);
+			}
+			function setDist(value) {
+				distance = value;
+				console.log("setDist function with input " + value + " triggered");
+				console.log("Current distance is: " + distance);
+			}
+		</script>
+	</head>
+
+	<body>
+		<table>
+			<tr>
+				<button type="button" onclick = "setDist(10)">Button1</button>
+				<button type="button" onclick = "setDist(20)">Button2</button>
+				<button type="button" onclick = "setDist(30)">Button3</button>
+				<button type="button" onclick = "setDist(40)">Button4</button>
+			</tr>
+			<tr>
+				<button type="button" onclick = "go()"autofocus>Button5</button>
+			</tr>
+		</table>
+	</body>
+</html>
