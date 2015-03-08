@@ -5,16 +5,25 @@ html, body, h1, h2, h3, ul, li, a, p, header, button, div {
 	margin: 0;
 }
 
-header {
-	font-weight: bold;
-}
-
-h1 {
- font: bold italic 3em/1em "Times New Roman", "MS Serif", "New York", serif;
+/*h1 {
+ font: bold italic 3em/1em Impact, Charcoal, sans-serif;
+ text-shadow: 5px 10px 5px #0b0b0b;
  padding: 25px 0 40px 0;
  text-align: center;
  color: #6600ff;
  }
+*/
+h1 {
+		position: relative;
+		font-size: 100px;
+		font: bold italic 3em/1em Impact, Charcoal, sans-serif;
+		color: #ff3300;
+		text-shadow: 2px 3px 3px #0f0f0f;
+		letter-spacing: -7px;
+		-webkit-text-stroke: 1px white;
+	}
+
+	
 
 body {
 	text-align: center;
@@ -41,13 +50,13 @@ footer {
 	clear: both;
 }
 
-body
-{
-	padding: 50px;
+.button_table {
+	text-align: center;
 }
 
 .desc {
 	text-align: center;
+	font-family: Arial;
 	font-variant: small-caps;
 	padding: 10px 0px 40px 0px;
 }
@@ -61,7 +70,7 @@ body
 .action-button
 {
 	position: relative;
-	padding: 10px 10px;
+	padding: 10px 10px 10px 10px;
 	border-radius: 15px;
 	font-family: 'Pacifico', cursive;
 	font-size: 40px;
