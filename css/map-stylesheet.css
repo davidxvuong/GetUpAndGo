@@ -17,6 +17,6 @@
 	width: 25%;
 	float: right;
 	color: #ffffff;
-	overflow-y: scroll;
+	overflow-y: auto;
 	height: 100vh
 }

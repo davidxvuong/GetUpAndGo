@@ -26,11 +26,8 @@ function go() {
 	console.log("2");
 	saveVars();
 	console.log("3");
-	/* console.log("Go function triggered");
-	console.log("Current radius is: " + radius); */
-	console.log("Initial Location: " + initLatLng);
-	console.log("Final Location: " + finalLatLng);
-	setTimeout(alert("Hello"), 3000)
+	
+	//setTimeout(alert("Hello"), 3000)
 	window.location.href = "map.html";
 }
 
