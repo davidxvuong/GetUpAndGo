@@ -88,3 +88,15 @@ function radtoDeg(value) {
 function degtoRad(value) {
 	return value * Math.PI / 180;
 }
+
+window.onload = function onload() {
+	navigator.geolocation.getCurrentPosition(function(position) {
+		initLat = position.coords.latitude;
+		initLong = position.coords.longitude;
+		console.log(initLat + ", " + initLong);
+	}, function(err) {
+		if (err.code != 1) {
+			
+		}
+	});
+}
