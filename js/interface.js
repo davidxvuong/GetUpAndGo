@@ -31,7 +31,7 @@ function getPoint(initLat, initLong, radius) {
 					isProperLocation = true;
 				}
 				else {
-					setTimeout(function(){console.log('200 ms delay'}, 200);
+					setTimeout(function(){console.log('200 ms delay');}, 200);
 				}
 			}
 		});
