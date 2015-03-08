@@ -51,6 +51,7 @@ function initialize() {
 			directionDisplay.setDirections(response);
 		}
 		else {
+			console.log("test");
 			console.log(status);
 		}
 	});
