@@ -50,7 +50,6 @@ function initialize() {
 			directionDisplay.setDirections(response);
 		}
 		else {
-			console.log("test");
 			console.log(status);
 		}
 	});
@@ -67,11 +66,16 @@ function markerFactory(latLngObj, mapObj, text) {
 }
 
 window.onload = function load() {
-	var initLat = sessionStorage.getItem('initLat');
-	var initLng = sessionStorage.getItem('initLong');
+	/* var initLat = sessionStorage.getItem('initLat');
+	var initLng = sessionStorage.getItem('initLong'); */
 	var finalLat = sessionStorage.getItem('finLat');
 	var finalLng = sessionStorage.getItem('finLong');
-	travelMethod = sessionStorage.getItem('travel');
+	travelMethod = sessionStorage.getItem('vehicle');
+	
+	if (navigator.geolocation) {
+	}
+	else {
+	}
 	
 	initLatLng = new google.maps.LatLng(initLat, initLng);
 	finalLatLng = new google.maps.LatLng(finalLat, finalLng);

@@ -7,49 +7,29 @@ var radius = 5;
 var vehicle = "walk";
 
 function getPoint(initLat, initLong, radius) {
-	var isProperLocation = false;
-	var maxDeg;
-	var randLat;
-	var maxLong;
-	var randLong;
-	var inArray;
-	var testElevation = new google.maps.ElevationService();
+	var maxDeg = radtoDeg(radius / EARTH_RADIUS);
+	var randLat = (Math.random() * 2 - 1) * maxDeg;
+	var maxLong = Math.sqrt(Math.pow(maxDeg,2) - Math.pow(randLat,2));
+	var randLong = (Math.random() * 2 - 1) * maxLong;
 	
-	while (!isProperLocation) {
-		maxDeg = radtoDeg(radius / EARTH_RADIUS);
-		randLat = (Math.random() * 2 - 1) * maxDeg;
-		maxLong = Math.sqrt(Math.pow(maxDeg,2) - Math.pow(randLat,2));
-		randLong = (Math.random() * 2 - 1) * maxLong;
-	
-		finLat = initLat + randLat;
-		finLong = initLong + randLong;
-		inArray = [new google.maps.LatLng(finLat, finLong)];
-		
-		testElevation.getElevationForLocations({'locations': inArray}, function(results, status) {
-			if (status === google.maps.ElevationStatus.OK) {
-				if (results[0].elevation > 0 ) {
-					console.log("test");
-					isProperLocation = true;
-				}
-				else {
-					console.log("test");
-					setTimeout(function(){console.log('200 ms delay');}, 200);
-				}
-			}
-		});
-		
-	}
+	finLat = initLat + randLat;
+	finLong = initLong + randLong;		
 
 	//Debugging code
 	console.log("Latitude of the destination is " + finLat);
-	console.log("Longitude of the destination is " + finLong);}
+	console.log("Longitude of the destination is " + finLong);
+}
 
 function go() {
+	console.log("1");
 	getPoint(initLat,initLat,radius);
+	console.log("2");
 	saveVars();
-	console.log("Go function triggered");
-	console.log("Current radius is: " + radius);
-	window.location.replace('map.html');
+	console.log("3");
+	/* console.log("Go function triggered");
+	console.log("Current radius is: " + radius); */
+	console.log("4");
+	window.location.href = "map.html";
 }
 
 function setVehicle(ride) {
