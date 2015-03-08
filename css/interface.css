@@ -5,20 +5,23 @@ html, body, h1, h2, h3, ul, li, a, p, header, button, div {
 	margin: 0;
 }
 
-.vehicle {
-	background-color: #33cccc;
-	color: #666699;
-	font-size: 20px;
-	font-family: "Arial";
-	padding: 10px 20px; 
+header {
+	font-weight: bold;
 }
+
+h1 {
+ font: bold italic 3em/1em "Times New Roman", "MS Serif", "New York", serif;
+ padding: 25px 0 40px 0;
+ text-align: center;
+ color: #6600ff;
+ }
 
 body {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #f0f0f0;
-	font-size: 50px;
+	background-color: #ccffff;
+	font-size: 40px;
 }
 
 li a {
@@ -41,6 +44,12 @@ footer {
 body
 {
 	padding: 50px;
+}
+
+.desc {
+	text-align: center;
+	font-variant: small-caps;
+	padding: 10px 0px 40px 0px;
 }
 
 .animate
