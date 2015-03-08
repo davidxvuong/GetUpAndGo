@@ -81,7 +81,8 @@ function performSearch() {
 }
 
 function markerFactory(place) {
-  var marker = new google.maps.Marker({
+	
+	var marker = new google.maps.Marker({
     map: map,
     position: place.geometry.location,
     icon: {
