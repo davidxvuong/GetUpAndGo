@@ -28,15 +28,15 @@ function go() {
 function setVehicle(ride) {
 	switch(ride) {
 		case "walk": 
-			radius = 5;
+			radius = 1.5;
 			vehicle = "walk";
 			break;
 		case "bike":
-			radius = 10;
+			radius = 5;
 			vehicle = "bike";
 			break;
 		case "bus":
-			radius = 30;
+			radius = 40;
 			vehicle = "bus";
 			break;
 		case "car":

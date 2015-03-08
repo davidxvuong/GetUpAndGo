@@ -62,7 +62,7 @@ function initialize() {
 function performSearch() {
 	var request = {
 		location: finalLatLng,
-		radius: '500',
+		radius: '800',
 		types: ['store']
 	};
 	
@@ -70,7 +70,7 @@ function performSearch() {
 		if (status === google.maps.places.PlacesServiceStatus.OK) {
 			for (var i = 0, result; i < 20; i++) {
 				result = results[i];
-				console.log(result);
+				
 				markerFactory(result);
 			}
 		}
