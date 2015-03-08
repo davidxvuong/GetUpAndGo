@@ -67,19 +67,11 @@ function markerFactory(latLngObj, mapObj, text) {
 }
 
 window.onload = function load() {
-	/* var initLat = sessionStorage.getItem('initLat');
+	var initLat = sessionStorage.getItem('initLat');
 	var initLng = sessionStorage.getItem('initLong');
-	var finalLat = sessionStorage.getItem('finalLat');
-	var finalLng = sessionStorage.getItem('finalLong');
-	travelMethod = sessionStorage.getItem('travel');*/
-	//UNCOMMENT CODE WHEN WE MERGE OUR TWO PIECES TOGETHER
-	//to be deleted
-	var initLat = 45.779309;
-	var initLng = -74.002725;
-	var finalLat = 45.546993;
-	var finalLng = -73.707801;
-	travelMethod = "walk";
-	//to be deleted
+	var finalLat = sessionStorage.getItem('finLat');
+	var finalLng = sessionStorage.getItem('finLong');
+	travelMethod = sessionStorage.getItem('travel');
 	
 	initLatLng = new google.maps.LatLng(initLat, initLng);
 	finalLatLng = new google.maps.LatLng(finalLat, finalLng);
