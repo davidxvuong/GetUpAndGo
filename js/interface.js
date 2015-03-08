@@ -1,6 +1,10 @@
 var EARTH_RADIUS = 6371;
 var initLat = 0;
 var initLong = 0;
+var finLat;
+var finLong;
+var radius;
+var vehicle;
 
 function getPoint(initLat, initLong, radius) {
 	var maxDeg = radtoDeg(radius / EARTH_RADIUS);
@@ -22,18 +26,40 @@ function go() {
 	window.location.replace('interface2.html');
 }
 
-function setRadius(value) {
-	radius = value;
-	console.log("setRadius function with input " + value + " triggered");
-	console.log("Current radius is: " + radius);
+function setVehicle(ride) {
+	switch(ride) {
+		case "walk": 
+			radius = 5;
+			vehicle = "walk";
+			break;
+		case "bike":
+			radius = 25;
+			vehicle = "bike";
+			break;
+		case "bus":
+			radius = 50;
+			vehicle = "bus";
+			break;
+		case "car":
+			radius = 100;
+			vehicle = "car";
+			break;
+		default:
+			radius = 0;
+			vehicle = undefined;
+			console.log("Inappropriate vehicle selected")
+	}
+	console.log("setRadius function with input " + ride + " triggered");
+	console.log("Radius = " + radius + ", Vehicle = " + vehicle);
 }
 
 function loadVars() {
-	if (true) { // fix this later
+	if (sessionStorage.getItem("autoSave")) {
 		initLat = sessionStorage.getItem("initLat");
 		initLong = sessionStorage.getItem("initLong");
 		finLat = sessionStorage.getItem("finLat");
 		finLong = sessionStorage.getItem("finLong");
+		vehicle = sessionStorage.getItem("vehicle");
 	}
 }
 
@@ -43,6 +69,8 @@ function saveVars() {
 		sessionStorage.setItem("initLong", initLong);
 		sessionStorage.setItem("finLat", finLat);
 		sessionStorage.setItem("finLong", finLong);
+		sessionStorage.setItem("vehicle", vehicle);
+		sessionStorage.setItem("autoSave", true);
 		console.log("saveVars successfully triggered");
 	}
 }
