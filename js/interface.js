@@ -28,7 +28,9 @@ function go() {
 	console.log("3");
 	/* console.log("Go function triggered");
 	console.log("Current radius is: " + radius); */
-	console.log("4");
+	console.log("Initial Location: " + initLatLng);
+	console.log("Final Location: " + finalLatLng);
+	setTimeout(alert("Hello"), 3000)
 	window.location.href = "map.html";
 }
 
@@ -39,11 +41,11 @@ function setVehicle(ride) {
 			vehicle = "walk";
 			break;
 		case "bike":
-			radius = 25;
+			radius = 10;
 			vehicle = "bike";
 			break;
 		case "bus":
-			radius = 50;
+			radius = 30;
 			vehicle = "bus";
 			break;
 		case "car":
