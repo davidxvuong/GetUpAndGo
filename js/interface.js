@@ -46,7 +46,7 @@ function go() {
 	saveVars();
 	console.log("Go function triggered");
 	console.log("Current radius is: " + radius);
-	window.location.replace('interface2.html');
+	window.location.replace('map.html');
 }
 
 function setVehicle(ride) {
