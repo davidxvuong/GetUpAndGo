@@ -1,24 +1,29 @@
 <!doctype html>
-<html>
+<html lang="en">
 	<head>
+		<meta charset="UTF-8">
 		<title>Get Up and Go!</title>
 		<link type="text/css" rel="stylesheet" href="css/interface.css"/>
+		<!--[if lt IE 9]>
+		<script>
+			document.createElement("div");
+			document.createElement("button");
+		<![endif]-->
 		<script src = "js/interface.js"></script>
 	</head>
 
 	<body>
 
-		<table>
-			<tr>
-				<button type="button" onclick = "setRadius(5)">Button1</button>
-				<button type="button" onclick = "setRadius(50)">Button2</button>
-				<button type="button" onclick = "setRadius(500)">Button3</button>
-				<button type="button" onclick = "setRadius(5000)">Button4</button>
-			</tr>
-			<tr>
-				<button type="button" onclick = "go()"autofocus>Button5</button>
+		<div>
+			<button type="button" onclick = "setVehicle('walk')">Walk</button>
+			<button type="button" onclick = "setVehicle('bike')">Bike</button>
+			<button type="button" onclick = "setVehicle('bus')">Bus</button>
+			<button type="button" onclick = "setVehicle('car')">Car</button>
+		</div>
+		<div>
+				<button type="button" onclick = "go()"autofocus>Go!</button>
+		</div>
 				<button type="button" onclick = "getPoint(initLat,initLat,radius)">Test getPoint()</button>
-			</tr>
-		</table>
+		</div>
 	</body>
 </html>
