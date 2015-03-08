@@ -3,8 +3,8 @@ var initLat = 0;
 var initLong = 0;
 var finLat;
 var finLong;
-var radius;
-var vehicle;
+var radius = 5;
+var vehicle = "walk";
 
 function getPoint(initLat, initLong, radius) {
 	var isProperLocation = false;
@@ -43,6 +43,7 @@ function getPoint(initLat, initLong, radius) {
 	console.log("Longitude of the destination is " + finLong);}
 
 function go() {
+	getPoint(initLat,initLat,radius);
 	saveVars();
 	console.log("Go function triggered");
 	console.log("Current radius is: " + radius);
