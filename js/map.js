@@ -13,9 +13,8 @@ function initialize() {
     }
 	map = new google.maps.Map(document.getElementById('map'), mapOptions);
 	
-	var markerImg = 'data/pin.png';
-	var start = markerFactory(initLatLng, map, markerImg, "Start");
-	var end = markerFactory(finalLatLng, map, markerImg, "Destination");
+	var start = markerFactory(initLatLng, map, "Start");
+	var end = markerFactory(finalLatLng, map, "Destination");
 	var travel;
 	var directionServices = new google.maps.DirectionsService();
 	var directionDisplay = new google.maps.DirectionsRenderer();
@@ -57,11 +56,10 @@ function initialize() {
 	});
 }
 
-function markerFactory(latLngObj, mapObj, image, text) {
+function markerFactory(latLngObj, mapObj, text) {
 	var marker = new google.maps.Marker({
 		position: latLngObj,
 		map: mapObj,
-		icon: image,
 		title: text,
 	});
 	
