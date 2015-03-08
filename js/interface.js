@@ -23,14 +23,16 @@ function getPoint(initLat, initLong, radius) {
 	
 		finLat = initLat + randLat;
 		finLong = initLong + randLong;
-		inArray.push(new google.maps.LatLng(finLat, finLong));
+		inArray = [new google.maps.LatLng(finLat, finLong)];
 		
 		testElevation.getElevationForLocations({'locations': inArray}, function(results, status) {
 			if (status === google.maps.ElevationStatus.OK) {
 				if (results[0].elevation > 0 ) {
+					console.log("test");
 					isProperLocation = true;
 				}
 				else {
+					console.log("test");
 					setTimeout(function(){console.log('200 ms delay');}, 200);
 				}
 			}
