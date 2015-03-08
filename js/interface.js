@@ -1,15 +1,19 @@
 EARTH_RADIUS = 6371;
 
 function getPoint(initLat, initLong, radius) {
-	delta = radtoDeg(radius / EARTH_RADIUS);
-	randLat = (Math.random() * 2 - 1) * delta;
-	maxLong = Math.sqrt(Math.pow(delta, 2) - Math.pow(randLat, 2));
+	maxDeg = radtoDeg(radius / EARTH_RADIUS);
+	randLat = (Math.random() * 2 - 1) * maxDeg;
+	maxLong = Math.sqrt(Math.pow(maxDeg, 2) - Math.pow(randLat, 2));
 	randLong = (Math.random() * 2 - 1) * maxLong;
 
 	finLat = initLat + randLat;
 	finLong = initLong + randLong;
+
+	//Debugging code
 	console.log("Latitude of the destination is " + finLat);
 	console.log("Longitude of the destination is " + finLong);
+	debugDist = Math.sqrt(Math.pow(randLat,2) + Math.pow(randLong,2)) * EARTH_RADIUS;
+	console.log("Displacement from your location to the destination is " + debugDist)
 }
 
 function go() {
