@@ -21,12 +21,6 @@ function go() {
 	getPoint(initLat,initLong,radius);
 	console.log("2");
 	saveVars();
-<<<<<<< HEAD
-=======
-	console.log("3");
-	
-	//setTimeout(alert("Hello"), 3000)
->>>>>>> parent of eaaa72e... Changed maximum distance for each method of travel
 	window.location.href = "map.html";
 }
 
