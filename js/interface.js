@@ -1,6 +1,6 @@
 var EARTH_RADIUS = 6371;
-var initLat = 0;
-var initLong = 0;
+var initLat;
+var initLong;
 var finLat;
 var finLong;
 var radius = 5;
@@ -11,7 +11,7 @@ function getPoint(initLat, initLong, radius) {
 	var randLat = (Math.random() * 2 - 1) * maxDeg;
 	var maxLong = Math.sqrt(Math.pow(maxDeg,2) - Math.pow(randLat,2));
 	var randLong = (Math.random() * 2 - 1) * maxLong;
-	
+	console.log(randLat + ", " + randLong);
 	finLat = initLat + randLat;
 	finLong = initLong + randLong;		
 
@@ -22,7 +22,7 @@ function getPoint(initLat, initLong, radius) {
 
 function go() {
 	console.log("1");
-	getPoint(initLat,initLat,radius);
+	getPoint(initLat,initLong,radius);
 	console.log("2");
 	saveVars();
 	console.log("3");
