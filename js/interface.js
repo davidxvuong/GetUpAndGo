@@ -14,17 +14,11 @@ function getPoint(initLat, initLong, radius) {
 	console.log(randLat + ", " + randLong);
 	finLat = initLat + randLat;
 	finLong = initLong + randLong;		
-
-	//Debugging code
-	console.log("Latitude of the destination is " + finLat);
-	console.log("Longitude of the destination is " + finLong);
 }
 
 function go() {
 	getPoint(initLat,initLong,radius);
 	saveVars();
-	
-	//setTimeout(alert("Hello"), 3000)
 	window.location.href = "map.html";
 }
 
@@ -49,10 +43,7 @@ function setVehicle(ride) {
 		default:
 			radius = 0;
 			vehicle = undefined;
-			console.log("Inappropriate vehicle selected")
 	}
-	console.log("setRadius function with input " + ride + " triggered");
-	console.log("Radius = " + radius + ", Vehicle = " + vehicle);
 }
 
 function loadVars() {
@@ -66,15 +57,12 @@ function loadVars() {
 }
 
 function saveVars() {
-	if (true) { // fix this later
-		sessionStorage.setItem("initLat", initLat);
-		sessionStorage.setItem("initLong", initLong);
-		sessionStorage.setItem("finLat", finLat);
-		sessionStorage.setItem("finLong", finLong);
-		sessionStorage.setItem("vehicle", vehicle);
-		sessionStorage.setItem("autoSave", true);
-		console.log("saveVars successfully triggered");
-	}
+	sessionStorage.setItem("initLat", initLat);
+	sessionStorage.setItem("initLong", initLong);
+	sessionStorage.setItem("finLat", finLat);
+	sessionStorage.setItem("finLong", finLong);
+	sessionStorage.setItem("vehicle", vehicle);
+	sessionStorage.setItem("autoSave", true);
 }
 
 function radtoDeg(value) {
@@ -89,10 +77,5 @@ window.onload = function onload() {
 	navigator.geolocation.getCurrentPosition(function(position) {
 		initLat = position.coords.latitude;
 		initLong = position.coords.longitude;
-		console.log(initLat + ", " + initLong);
-	}, function(err) {
-		if (err.code != 1) {
-			
-		}
-	});
+	}, function(err) {});
 }
