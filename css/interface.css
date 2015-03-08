@@ -10,14 +10,6 @@ html {
 	background-size: cover;
 }
 
-/*h1 {
- font: bold italic 3em/1em Impact, Charcoal, sans-serif;
- text-shadow: 5px 10px 5px #0b0b0b;
- padding: 25px 0 40px 0;
- text-align: center;
- color: #6600ff;
- }
-*/
 h1 {
 		position: relative;
 		font-size: 100px;
@@ -35,23 +27,6 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	font-size: 40px;
-}
-
-li a {
-	display: inline;
-	font-variant: small-caps;
-	font-weight: bold;
-	margin-top: 10px;
-}
-
-aside {
-	float: right;
-	padding: 20px;
-	margin-top: 10px;
-}
-
-footer {
-	clear: both;
 }
 
 .button_table {

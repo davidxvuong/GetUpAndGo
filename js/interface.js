@@ -3,7 +3,7 @@ var initLat;
 var initLong;
 var finLat;
 var finLong;
-var radius = 5;
+var radius = 1.5;
 var vehicle = "walk";
 
 function getPoint(initLat, initLong, radius) {
@@ -21,11 +21,8 @@ function getPoint(initLat, initLong, radius) {
 }
 
 function go() {
-	console.log("1");
 	getPoint(initLat,initLong,radius);
-	console.log("2");
 	saveVars();
-	console.log("3");
 	
 	//setTimeout(alert("Hello"), 3000)
 	window.location.href = "map.html";
@@ -34,15 +31,15 @@ function go() {
 function setVehicle(ride) {
 	switch(ride) {
 		case "walk": 
-			radius = 5;
+			radius = 1.5;
 			vehicle = "walk";
 			break;
 		case "bike":
-			radius = 10;
+			radius = 5;
 			vehicle = "bike";
 			break;
 		case "bus":
-			radius = 30;
+			radius = 40;
 			vehicle = "bus";
 			break;
 		case "car":
