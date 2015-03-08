@@ -21,7 +21,7 @@ function go() {
 	getPoint(initLat,initLong,radius);
 	console.log("2");
 	saveVars();
-
+	console.log("3");
 	window.location.href = "map.html";
 }
 
