@@ -62,7 +62,7 @@ function initialize() {
 function performSearch() {
 	var request = {
 		location: finalLatLng,
-		radius: '800',
+		radius: '1500',
 		types: ['store']
 	};
 	
