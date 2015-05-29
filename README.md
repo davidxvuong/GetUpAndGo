@@ -11,4 +11,5 @@ As shown in this repository, this web app was mainly implemented using JavaScrip
 - [JavaScript's Navigator object](http://www.w3schools.com/jsref/obj_navigator.asp) to determine the user's current location
 - Developing an algorithm that generates longitude and latitude coordinates based on the selected method of travel
 - Various [Google Maps API](https://developers.google.com/maps/documentation/javascript/3.exp/reference) to set the map, determine the directions from the user's current location to the generated destination, and nearby places at the destination
+- Implementation of a marker factory to display the nearby restaurants and stores at the destination location
 - [HTML5 Web Storage](http://www.w3schools.com/html/html5_webstorage.asp) to store information used to store key information between webpages for the session
