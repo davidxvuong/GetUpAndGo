@@ -13,3 +13,8 @@ As shown in this repository, this web app was mainly implemented using JavaScrip
 - Various [Google Maps API](https://developers.google.com/maps/documentation/javascript/3.exp/reference) to set the map, determine the directions from the user's current location to the generated destination, and nearby places at the destination
 - Implementation of a marker factory to display the nearby restaurants and stores at the destination location
 - [HTML5 Web Storage](http://www.w3schools.com/html/html5_webstorage.asp) to store information used to store key information between webpages for the session
+
+##Google Maps API
+A detailed list of the Google API used in this project.
+
+![Alt text](https://dl.dropboxusercontent.com/u/9118489/Github%20Pictures/GetUpAndGo/api.png)
