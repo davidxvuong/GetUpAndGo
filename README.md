@@ -7,6 +7,7 @@ Don't worry! We'll find it for you!<br>
 Just choose how you would like to travel, and we will take care the rest!
 
 To see a working copy, [click here](http://davidvuong.ca/GetUpAndGo/).
+
 NOTE: You must allow the web browser to retrieve your current location.
 
 ##Implementation
