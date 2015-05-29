@@ -6,6 +6,8 @@ Want to get some fresh air, but just don't know where to go?<br>
 Don't worry! We'll find it for you!<br>
 Just choose how you would like to travel, and we will take care the rest!
 
+To see a working copy, [click here](http://davidvuong.ca/GetUpAndGo/).
+
 ##Implementation
 As shown in this repository, this web app was mainly implemented using JavaScript.This web app was implemented using various web technologies and intuition such as:
 - [JavaScript's Navigator object](http://www.w3schools.com/jsref/obj_navigator.asp) to determine the user's current location
